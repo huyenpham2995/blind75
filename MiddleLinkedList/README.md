@@ -26,9 +26,32 @@
         - Stop. Return p1.
 
 ### Pseudocode
+#### Approach 1
+- If head == None: return head
+- Initializing variables:
+    - p = head
+    - count = 0
+- while p:
+    - p = p.next
+    - count += 1
+- mid point = floor(count/2)
+- p = head
+- for i in range(mid_point):
+    - p = p.next
+- Return p
+
+#### Approach 2
+- If head == None: return head
+- Initializing variables:
+    - p1 = head
+    - p2 = head.next
+- while p2:
+    - p1 = p1.next
+    - p2 = p2.next.next
+- Return p1
+
+### BigO
 - Approach 1: We go through the list 1 time to determine its length, then go through half of it the 2nd time => O(N + 1/2N) = O(3/2N) = O(N).
 - Approach 2: 2 pointers are moving at the same time. Each of them move N/2 steps (pointer 1 traverses half of the array 1 step at a time, pointer 2 traverse to the end but do that 2 steps at a time) => O(N/2 + N/2) = O(N).
 - They have the same bigO but technicall approach 2 is faster, esp when the list grows long.
-
-### BigO
 
