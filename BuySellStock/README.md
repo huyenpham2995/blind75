@@ -11,13 +11,14 @@
 - We can sell before buying, so if we choose to buy from a certain day, you can only look at the price of the day afterwards.
 - No same-day trade allowed either.
 - This would be best represents by a table, with row as buying price and column as selling price. Example: prices = [7,1,5,3,6,4]
-| Buy/Sell| 7 | 1 | 5 | 3 | 6 | 4 |
-| 7 | x | -6 | -2 | -4 | -1 | -3 |
-| 1 | x | x | 4 | 2 | 5 | 3 |
-| 5 | x | x | x | -2 | 1 | -1 |
-| 3 | x | x | x | x | 3 | 1 |
-| 6 | x | x | x | x | x | -2 |
-| 4 | x | x | x | x | x | x |
+| Buy/Sell | 7 | 1  | 5  | 3  | 6  | 4  |
+|----------|---|----|----|----|----|----|
+| 7        | x | -6 | -2 | -4 | -1 | -3 |
+| 1        | x | x  | 4  | 2  | 5  | 3  |
+| 5        | x | x  | x  | -2 | 2  | -1 |
+| 3        | x | x  | x  | x  | 3  | 1  |
+| 6        | x | x  | x  | x  | x  | -2 |
+| 4        | x | x  | x  | x  | x  | x  |
 
 ### Pseudocode
 
